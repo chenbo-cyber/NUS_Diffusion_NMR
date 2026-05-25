@@ -1,0 +1,18 @@
+##TITLE= Parameter file, TOPSPIN		Version 2.1
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 7	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= arbogastl
+$$ 2016-10-21 11:26:34.748 -0400  arbogastl@us600.AD.IBBR.UMD.EDU
+$$ /opt/topspin/data/arbogast/nmr/GB1/8/acqu2
+$$ process /opt/topspin/prog/mod/dataserver
+##$BF1= 60.810645
+##$FnMODE= 5
+##$NUC1= <15N>
+##$O1= 7206.0614325
+##$SFO1= 60.8178510614325
+##$SW= 35
+##$SW_h= 6194.02709099609
+##$TD= 340
+##END=

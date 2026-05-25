@@ -1,0 +1,18 @@
+##TITLE= Audit trail, TOPSPIN		Version 2.1
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= arbogastl
+$$ /opt/topspin/data/arbogast/nmr/GB1/8/audita.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2016-10-21 14:06:23.828 -0400>,<arbogastl>,<us600.AD.IBBR.UMD.EDU>,<go>,<TOPSPIN 2.1>,
+      <created by zg
+	started at 2016-10-21 11:26:45.615 -0400,
+	POWCHK enabled, PULCHK disabled,
+       configuration hash MD5:
+       E0 44 D9 7A 1C E7 66 EB 82 F5 D1 8A F2 CD 69 DD
+       data hash MD5: 3352 * 340
+       42 F7 3A 0F 88 6B 6F DC 24 BD F2 8B A7 1B 31 CC>)
+##END=
+
+$$ hash MD5
+$$ 79 0F E7 84 A4 7D 28 80 28 08 79 70 8E A3 DC 0F
