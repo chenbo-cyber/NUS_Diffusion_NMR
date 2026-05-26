@@ -173,20 +173,6 @@ if __name__ == "__main__":
             diffusion.feed_data(val_data)
             diffusion.test(continous=True)
             visuals = diffusion.get_current_visuals()
-
-            # sr_img_mode = 'grid'
-            # if sr_img_mode == 'single':
-            #     # single img series
-            #     sr_img = visuals['SR']  # uint8
-            #     sample_num = sr_img.shape[0]
-            #     for iter in range(0, sample_num):
-            #         Metrics.save_img(
-            #             Metrics.tensor2img(sr_img[iter]), '{}/{}_{}_sr_{}.png'.format(result_path, current_step, idx, iter))
-            # else:
-                # grid img
-                # sr_img = Metrics.tensor2img(visuals['SR'])  # uint8
-                # Metrics.save_img(
-                #     Metrics.tensor2img(visuals['SR'][-1]), '{}/{}_{}_sr.png'.format(result_path, current_step, idx))
             
             bsz = visuals['HR'].shape[0]
             for i in range(bsz):

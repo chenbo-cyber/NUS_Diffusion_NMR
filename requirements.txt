@@ -15,4 +15,6 @@ tqdm
 h5py
 torchsummary
 jupyter
+tensorboardX
+ipykernel
 

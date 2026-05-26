@@ -131,7 +131,7 @@ class NUSNMRDataset(Dataset):
 
         # 采样率固定
         result_formatted = random.randint(1, 10000)  # 生成1到10000之间的随机整数
-        Mask = scio.loadmat('./data2D/0.08_2D_mask-64-64/Mask_' + str(result_formatted) + '.mat')['Mask']
+        Mask = scio.loadmat('./data64/0.08_2D_mask-64-64/Mask_' + str(result_formatted) + '.mat')['Mask']
         U = Mask
 
         NUS_FID = np.multiply(U, xx)
