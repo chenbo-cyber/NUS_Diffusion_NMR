@@ -9,13 +9,13 @@ Then install the dependencies listed in `requirements`:
 
 ### 2D Data Processing (using GB1 data as an example):
 
-Training: You can use the `train256.py` file to train a one-dimensional undersampled reconstruction model on simulated data (a pre-trained weight file `sr_NUSNMR_250930_081820` is also provided in the code repository).
+Training: You can use the `train256.py` file to train a one-dimensional undersampled reconstruction model on simulated data (a pre-trained weight file `checkpoints/2D` is also provided in the code repository).
 
 Testing: Use the `take_sample2D` file directly. The example file can be used to test .mat data or raw fid data; the results will be automatically saved to the data folder, named `label_spec.mat` and `recon_spec.mat` respectively.
 
-### 3D Data Processing: In `deal_64` (using A3DK08 as an example):
+### 3D Data Processing (using A3DK08 as an example):
 
-Training: A 2D undersampled reconstruction model can be trained on simulated data using the `train64.py` file (a pre-trained weight file `sr_NUSNMR_251212_073902` is also provided in the code repository).
+Training: A 2D undersampled reconstruction model can be trained on simulated data using the `train64.py` file (a pre-trained weight file `checkpoints/3D` is also provided in the code repository).
 
 Testing: The A3DK08 folder contains the raw .fid data.
 

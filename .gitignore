@@ -43,4 +43,4 @@ conda-meta/
 # =========================
 *.log
 
-/experiments
+experiments/

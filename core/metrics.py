@@ -152,6 +152,7 @@ def save_contour2D(nus_spec, recon_spec, label_spec, sr_spec, sequence, save_pat
     ax.set_ylabel('Y')
     plt.colorbar(contour_input, ax=ax, label='Amplitude')
     plt.savefig(save_path)
+    plt.close(fig)
 
     os.makedirs(f'./data/{dataset_name}_recon', exist_ok=True)
     recon_name = f'recon_spec{sequence}'
