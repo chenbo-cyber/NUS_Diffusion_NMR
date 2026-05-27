@@ -110,7 +110,7 @@ class NUSNMRDataset(Dataset):
 
         # Fixed sampling rate
         result_formatted = random.randint(1, 10000)
-        Mask = scio.loadmat('./data/0.15_stack_mask-256-256/Mask_' + str(result_formatted) + '.mat')['Mask']
+        Mask = scio.loadmat('./data/data256/0.15_stack_mask-256-256/Mask_' + str(result_formatted) + '.mat')['Mask']
 
         idx_ones = np.where(Mask == 1)
         U = Mask
