@@ -9,7 +9,7 @@
         "tb_logger": "tb_logger",
         "results": "results",
         "checkpoint": "checkpoint",
-        "resume_state": "checkpoints/2D/I540000_E54" // One-dimensional undersampling
+        "resume_state": "checkpoints/2D/I610000_E61" // One-dimensional undersampling
         //"resume_state": "sr_NUSNMR_251212_073902/checkpoint/I710000_E71" // Two-dimensional undersampling
     },
     "datasets": {

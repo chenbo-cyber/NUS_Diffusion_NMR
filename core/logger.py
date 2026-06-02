@@ -53,6 +53,11 @@ def parse(args):
         gpu_list = ','.join(str(x) for x in opt['gpu_ids'])
     os.environ['CUDA_VISIBLE_DEVICES'] = gpu_list
     print('export CUDA_VISIBLE_DEVICES=' + gpu_list)
+    if gpu_list and gpu_list != '':
+        num_visible_gpus = len(gpu_list.split(','))
+        if num_visible_gpus > 0:
+            opt['gpu_ids'] = list(range(num_visible_gpus))
+            print(f"setting opt['gpu_ids'] = {opt['gpu_ids']}")
     if len(gpu_list) > 1:
         opt['distributed'] = True
     else:
