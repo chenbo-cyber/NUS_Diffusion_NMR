@@ -67,7 +67,7 @@ def save_contour(nus_spec, recon_spec, label_spec, save_path):
 
 def save_contour2(nus_spec, recon_spec, label_spec, sr_spec, save_path):
     fig = plt.figure(figsize=(42, 10))
-    contour_levels = 10
+    contour_levels = 30
 
     ax = fig.add_subplot(131)
     contour_input = ax.contour(np.abs(nus_spec), levels=contour_levels, linewidths=2, cmap='viridis')

@@ -226,6 +226,7 @@ class GaussianDiffusion(nn.Module):
                 if self.data_consistency:
                     if self.data_path['real_data_path'] is not None:
                         ori_spec = scio.loadmat(f"{self.data_path['real_data_path']}.mat")['LR']
+                        ori_spec = np.pad(ori_spec, ((0, 256-ori_spec.shape[0]),(0,0)))
                         phase_input, pad_shape, pad_height, pad_width = block_data_ddpm(ori_spec, 256)
                         img = torch.complex(img[:, 0], img[:, 1])
                         img = reconstruct_data_ddpm(img, pad_shape, pad_height, pad_width)
@@ -240,7 +241,7 @@ class GaussianDiffusion(nn.Module):
                                                                              1 + 1e3)
 
                         # Step 3: L1稀疏软阈值约束（在选定域中执行）
-                        lam_l1 = 0.01  # L1稀疏约束强度，可调
+                        lam_l1 = 0.002  # L1稀疏约束强度，可调
                         # 在频域中稀疏（适合NMR谱图）
                         freq_c = torch.fft.fft(img, dim=-2)
                         mag = torch.abs(freq_c)

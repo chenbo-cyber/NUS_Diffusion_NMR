@@ -129,6 +129,7 @@ class DenseNet(nn.Module):
             x = self.transitionlayer[block_idx](x)
             if self.data_path['real_data_path'] is not None:
                 ori_spec = scio.loadmat(f"{self.data_path['real_data_path']}.mat")['LR']
+                ori_spec = np.pad(ori_spec, ((0, 256-ori_spec.shape[0]),(0,0)))
                 phase_input, pad_shape, pad_height, pad_width = block_data_ddpm(ori_spec, 256)
                 x = torch.complex(x[:, 0], x[:, 1])
                 x = reconstruct_data_ddpm(x, pad_shape, pad_height, pad_width)
