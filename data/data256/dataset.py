@@ -53,7 +53,7 @@ class NUSNMRDataset(Dataset):
         mask[np.arange(dim), J.ravel() - 1] = 1  # TODO
         mask = np.cumsum(mask, axis=1)
 
-        ph = np.random.uniform(0.0, 0.2 * np.pi, size=(dim, max_J))  # Random phase  # TODO
+        ph = np.random.uniform(-np.pi, np.pi, size=(dim, max_J))  # Random phase  # TODO
         A = np.random.uniform(0.05, 1.0, size=(dim, max_J))  # Random amplitude
         w = np.random.uniform(0.05, 0.95, size=(dim, max_J))  # Random frequency
         sgm = np.random.uniform(10, 179.2, size=(dim, max_J))  # Random relaxation time
